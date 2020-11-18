@@ -23,16 +23,30 @@ public class Libro {
     }
     
     /**
-     * Devuelve el precio del billete
+     * Devuelve el autor
      */
     public String getAutor() {
         return autor;
     }
     
     /**
-     * Devuelve el precio del billete
+     * Devuelve el titulo
      */
     public String getTitulo() {
         return titulo;
+    }
+    
+    /**
+     * Imprime el nombre del autor
+     */
+    public void imprimeAutor() {
+        System.out.println(autor);
+    }
+    
+    /**
+     * Imprime el el titulo del libro
+     */
+    public void imprimeTitulo() {
+        System.out.println(titulo);
     }
 }
