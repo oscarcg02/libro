@@ -21,4 +21,18 @@ public class Libro {
         autor = autorLibro;
         titulo = tituloLibro;
     }
+    
+    /**
+     * Devuelve el precio del billete
+     */
+    public String getAutor() {
+        return autor;
+    }
+    
+    /**
+     * Devuelve el precio del billete
+     */
+    public String getTitulo() {
+        return titulo;
+    }
 }
