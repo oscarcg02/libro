@@ -15,17 +15,19 @@ public class Libro {
     private int numeroPaginas;
     private String numeroReferencia;
     private int vecesPrestado;
+    private boolean esLibroDeTexto;
 
     /**
      * Fija el autor y el titulo del libro a los dados como parametro
      */
-    public Libro(String autorLibro, String tituloLibro, int numero)
+    public Libro(String autorLibro, String tituloLibro, int numero, boolean texto)
     {
         autor = autorLibro;
         titulo = tituloLibro;
         numeroPaginas = numero;
         numeroReferencia = "";
         vecesPrestado = 0;
+        esLibroDeTexto = texto;
     }
     
     /**
@@ -61,6 +63,13 @@ public class Libro {
      */
     public int getVecesPrestado() {
         return vecesPrestado;
+    }
+    
+    /**
+     * Devuelve si es de texto o no
+     */
+    public boolean getEsLibroDeTexto() {
+        return esLibroDeTexto;
     }
     
     public void prestar () {
@@ -104,6 +113,13 @@ public class Libro {
             System.out.println("Numero de Referencia: " + numeroReferencia);
         }
         System.out.println("Prestado: " + vecesPrestado);
+        if (esLibroDeTexto == true) {
+            System.out.println("Libro de texto: " + "Si");
+        }
+        else {
+            System.out.println("Libro de texto: " + "No");
+        }
+        
     }
     
     /**
