@@ -56,10 +56,10 @@ public class Libro {
     
     public void setNumeroReferencia(String referencia) {
         if (numeroReferencia.length() <= 3) {
-            System.out.println("Nesceita al meno 3 caracteres");
+            numeroReferencia = referencia;
         }
         else {
-            numeroReferencia = referencia;
+            System.out.println("Nesceita al meno 3 caracteres");
         }
     }
     
@@ -96,10 +96,10 @@ public class Libro {
      * Devuelve los detalles
      */
     public String getmostrarDetalles() {
-        String referenciaError = "ZZZ";
-        if (numeroReferencia.length() <= 0) {
-            numeroReferencia = referenciaError;
+        String referencia = "ZZZ";
+        if (numeroReferencia.length() > 0) {
+            referencia = numeroReferencia;
         }
-        return "Titulo: " + titulo + " | " + " Autor: " + autor + " | " + " Paginas: " + numeroPaginas + " | " + "Numero de Referencia: " + numeroReferencia;
+        return "Titulo: " + titulo + " | " + " Autor: " + autor + " | " + " Paginas: " + numeroPaginas + " | " + "Numero de Referencia: " + referencia;
     }
 }
