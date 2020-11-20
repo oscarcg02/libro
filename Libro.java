@@ -130,6 +130,10 @@ public class Libro {
         if (numeroReferencia.length() > 0) {
             referencia = numeroReferencia;
         }
-        return "Titulo: " + titulo + " | " + " Autor: " + autor + " | " + " Paginas: " + numeroPaginas + " | " + "Numero de Referencia: " + referencia + " | " + "Prestado: " + vecesPrestado;
+        String textoSiNo = "no";
+        if (esLibroDeTexto == true) {
+            textoSiNo = "si";
+        }
+        return "Titulo: " + titulo + " | " + " Autor: " + autor + " | " + " Paginas: " + numeroPaginas + " | " + "Numero de Referencia: " + referencia + " | " + "Prestado: " + vecesPrestado + " | " + "Libro de texto: " + "textoSiNo";
     }
 }
